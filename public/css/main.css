@@ -1,0 +1,87 @@
+body {
+  border: 0;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 6em 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "tTitulo    tTitulo     tTitulo     tTitulo     tTitulo      tTitulo" "tLogo      tLogo       tLogo       tFormulario tFormulario  tFormulario" "tLogo      tLogo       tLogo       tFormulario tFormulario  tFormulario" "tNoticias  tNoticias   tNoticias   tFormulario tFormulario  tFormulario" "tNoticias  tNoticias   tNoticias   tFormulario tFormulario  tFormulario" "tNoticias  tNoticias   tNoticias   tPie        tPie         tPie";
+}
+
+.titulo {
+  grid-area: tTitulo;
+  text-align: center;
+}
+.titulo h1 {
+  font-size: 3em;
+}
+
+.logo {
+  grid-area: tLogo;
+}
+.logo img {
+  width: 50%;
+}
+
+.noticias {
+  grid-area: tNoticias;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+.noticias .noticia p {
+  font-size: 1.5em;
+}
+.noticias .noticia img {
+  width: 100px;
+}
+
+.formulario {
+  grid-area: tFormulario;
+  text-align: center;
+}
+.formulario h2 {
+  font-size: 3em;
+}
+.formulario form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+}
+
+.pie {
+  grid-area: tPie;
+}
+.pie p {
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 400px) and (max-width: 1000px) {
+  body {
+    font-size: 10px;
+  }
+  .principal {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6em 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "tLogo tTitulo tTitulo tTitulo" "tLogo tNoticias tNoticias tNoticias" "tNoticias tNoticias tNoticias tNoticias" "tFormulario tFormulario tFormulario tFormulario" "tFormulario tFormulario tFormulario tFormulario" "tpie        tPie        tPie        tPie";
+  }
+  .log img {
+    width: 50%;
+  }
+  .noticias {
+    grid-template-columns: 1fr;
+  }
+  .noticias .noticia p {
+    font-size: 1.5rem;
+  }
+  .noticias .noticia img {
+    width: 100%;
+  }
+  .formulario {
+    text-align: left;
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=main.css.map */
